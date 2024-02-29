@@ -214,9 +214,6 @@ resources:
       service-plan: lite
   
   # --------------------- AUDIT LOG  SERVICE -------------------
-  - name: app1-auditlog
+  - name: auditlog
   # ------------------------------------------------------------
-    type: org.cloudfoundry.managed-service
-    parameters:
-      service: auditlog
-      service-plan: oauth2
+    type: org.cloudfoundry.existing-service
