@@ -25,11 +25,11 @@ service CatalogService @(path : '/catalog')
     ;
 
     annotate Sales with @PersonalData : {
-      DataSubjectRole : 'Org',
+      DataSubjectRole : 'Country',
       EntitySemantics : 'DataSubject'
     } {
-      org    @PersonalData.FieldSemantics: 'DataSubjectID';
-      amount @PersonalData.IsPotentiallySensitive;
+      country @PersonalData.FieldSemantics: 'DataSubjectID';
+      amount  @PersonalData.IsPotentiallySensitive;
     };
 
     @readonly
