@@ -212,3 +212,11 @@ resources:
     parameters:
       service: application-logs
       service-plan: lite
+  
+  # --------------------- AUDIT LOG  SERVICE -------------------
+  - name: app1-auditlog
+  # ------------------------------------------------------------
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: auditlog
+      service-plan: oauth

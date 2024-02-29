@@ -4,19 +4,6 @@ using {CV_SALES, CV_SESSION_INFO} from '../db/data-model';
 
 using { API_SALES_ORDER_SRV } from './external/API_SALES_ORDER_SRV.csn';
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 service CatalogService @(path : '/catalog')
 @(requires: 'authenticated-user')
 {
@@ -37,6 +24,13 @@ service CatalogService @(path : '/catalog')
       }
     ;
 
+    annotate Sales with @PersonalData : {
+      DataSubjectRole : 'Org',
+      EntitySemantics : 'DataSubject'
+    } {
+      org    @PersonalData.FieldSemantics: 'DataSubjectID';
+      amount @PersonalData.IsPotentiallySensitive;
+    };
 
     @readonly
     entity VSales
@@ -68,23 +62,8 @@ service CatalogService @(path : '/catalog')
           TransactionCurrency
         };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     type userScopes { identified: Boolean; authenticated: Boolean; Viewer: Boolean; Admin: Boolean; };
     type userType { user: String; locale: String; scopes: userScopes; };
     function userInfo() returns userType;
-
 
 };

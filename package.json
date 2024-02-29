@@ -8,14 +8,15 @@
     "node": "^18"
   },
   "dependencies": {
-    "@sap/cds": "latest",
-    "hdb": "^0.19",
+    "@cap-js/audit-logging": "latest",
     "@sap-cloud-sdk/http-client": "latest",
+    "@sap/cds": "latest",
     "@sap/xsenv": "latest",
     "@sap/xssec": "latest",
     "cf-nodejs-logging-support": "latest",
     "debug": "^4.3",
-    "express": "^4"
+    "express": "^4",
+    "hdb": "^0.19"
   },
   "devDependencies": {
     "@sap/ux-specification": "^1.96.4"
@@ -76,19 +77,18 @@
             }
           }
         }
-      }
-      ,
+      },
       "db": {
         "[production]": {
-          "kind": "hana-cloud"
-          ,"model": [
+          "kind": "hana-cloud",
+          "model": [
             "db/data-config",
             "db/data-test"
           ]
         },
         "[development]": {
-          "kind": "sql"
-          ,"model": [
+          "kind": "sql",
+          "model": [
             "db/data-config",
             "db/data-test"
           ]
@@ -97,8 +97,7 @@
           "db",
           "srv"
         ]
-      }
-      ,
+      },
       "API_SALES_ORDER_SRV": {
         "kind": "odata-v2",
         "model": "srv/external/API_SALES_ORDER_SRV",
