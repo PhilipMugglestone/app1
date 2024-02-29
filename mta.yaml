@@ -219,4 +219,4 @@ resources:
     type: org.cloudfoundry.managed-service
     parameters:
       service: auditlog
-      service-plan: oauth
+      service-plan: oauth2
