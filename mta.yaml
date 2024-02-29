@@ -54,6 +54,7 @@ modules:
       - name: app1-dest
       - name: app1-logging
       - name: app1-db
+      - name: auditlog
     provides:
       - name: srv-api
         properties:
