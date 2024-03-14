@@ -32,7 +32,7 @@ modules:
     requires:
       - name: app1-uaa
       - name: app1-db
-      - name: app1-logging
+      - name: cloud-logging
 
   # --------------------- SERVER MODULE ------------------------
   - name: app1-srv
@@ -52,7 +52,7 @@ modules:
     requires:
       - name: app1-uaa
       - name: app1-dest
-      - name: app1-logging
+      - name: cloud-logging
       - name: app1-db
       - name: auditlog
     provides:
@@ -206,15 +206,12 @@ resources:
     properties:
       hdi-service-name: ${service-name}
 
-  # ---------------- APPLICATION LOGGING SERVICE ---------------
-  - name: app1-logging
+  # ------------------- CLOUD LOGGING SERVICE ------------------
+  - name: cloud-logging
   # ------------------------------------------------------------
-    type: org.cloudfoundry.managed-service
-    parameters:
-      service: application-logs
-      service-plan: lite
+    type: org.cloudfoundry.existing-service
   
-  # --------------------- AUDIT LOG  SERVICE -------------------
+  # --------------------- AUDIT LOG SERVICE --------------------
   - name: auditlog
   # ------------------------------------------------------------
     type: org.cloudfoundry.existing-service
