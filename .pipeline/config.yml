@@ -2,13 +2,15 @@
 general:
   buildTool: "mta"
 service:
-  buildToolVersion: "MBTJ11N18" #see SAP Continuous Integration and Delivery service for more build tool version options
+  buildToolVersion: "MBTJ17N18" #see SAP Continuous Integration and Delivery service for more build tool version options
 stages:
   Build:
     mavenExecuteStaticCodeChecks: false
     npmExecuteLint: true
   Additional Unit Tests:
     npmExecuteScripts: false
+  Malware Scan:
+    malwareExecuteScan: true
   Acceptance:
     cloudFoundryDeploy: false
     cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
@@ -28,6 +30,7 @@ stages:
     cfAppName: "app1"
     cfCredentialsId: "cf"
     deployType: "standard"
+    tmsExport: true
     tmsUpload: false
 steps:
   artifactPrepareVersion:
