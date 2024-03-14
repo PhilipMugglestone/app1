@@ -30,7 +30,7 @@ stages:
     cfAppName: "app1"
     cfCredentialsId: "cf"
     deployType: "standard"
-    tmsExport: true
+    tmsExport: false
     tmsUpload: false
 steps:
   artifactPrepareVersion:
