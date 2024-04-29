@@ -74,7 +74,7 @@
         }
     },
     "sap.platform.cf": {
-        "ui5VersionNumber": "1.110.1"
+        "ui5VersionNumber": "1.120.12"
     },
     "sap.ui5": {
         "resources": {
