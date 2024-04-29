@@ -19,7 +19,7 @@
     "hdb": "^0.19"
   },
   "devDependencies": {
-    "@sap/ux-specification": "^1.96.4"
+    "@sap/ux-specification": "^1.120.8"
   },
   "sapux": [
     "app/fiori"
