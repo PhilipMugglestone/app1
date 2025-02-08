@@ -40,5 +40,5 @@ steps:
   cloudFoundryDeploy:
     mtaDeployParameters: "-f --version-rule ALL"
   tmsUpload:
-    nodeName: "preprod"
-    credentialsId: "tms"
+    nodeName: "test"
+    credentialsId: "ctms"
