@@ -14,7 +14,7 @@ stages:
   Acceptance:
     cloudFoundryDeploy: false
     cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
-    cfOrg: "iepsdemo-dev"
+    cfOrg: "mugglecap-dev"
     cfSpace: "dev"
     cfAppName: "app1"
     cfCredentialsId: "cf"
@@ -25,7 +25,7 @@ stages:
   Release:
     cloudFoundryDeploy: true
     cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com"
-    cfOrg: "iepsdemo-dev"
+    cfOrg: "mugglecap-dev"
     cfSpace: "dev"
     cfAppName: "app1"
     cfCredentialsId: "cf"
