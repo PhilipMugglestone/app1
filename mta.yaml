@@ -12,7 +12,7 @@ build-parameters:
       commands:
         - npm install --production
         - npx -p @sap/cds-dk cds build --production
-
+ 
 modules:
   # ---------------- DATABASE DEPLOYER MODULE ------------------
   - name: app1-db-deployer
